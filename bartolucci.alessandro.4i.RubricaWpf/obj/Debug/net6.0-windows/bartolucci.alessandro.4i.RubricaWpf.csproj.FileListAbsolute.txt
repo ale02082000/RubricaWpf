@@ -1,0 +1,3 @@
+C:\Users\eneam\Desktop\bartolucci.alessandro.4i.RubricaWpf\obj\Debug\net6.0-windows\bartolucci.alessandro.4i.RubricaWpf.csproj.AssemblyReference.cache
+C:\Users\eneam\Desktop\bartolucci.alessandro.4i.RubricaWpf\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\eneam\Desktop\bartolucci.alessandro.4i.RubricaWpf\obj\Debug\net6.0-windows\bartolucci.alessandro.4i.RubricaWpf_MarkupCompile.cache
