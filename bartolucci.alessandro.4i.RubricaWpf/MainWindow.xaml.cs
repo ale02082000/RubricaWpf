@@ -28,13 +28,18 @@ namespace bartolucci.alessandro._4i.RubricaWpf
         {
             try
             {
+            StreamReader fin = new StreamReader("Dati.csv");
+
                 Contatto[] Contatti = new Contatto[100];
-                for (int i = 0; i < Contatti.Length; i++)
-                    Contatti[i] = new Contatto();
+               
+               
+               // for (int i = 0; i < Contatti.Length; i++)
+                int idx=0;
+                 foreach( Contatto c in Contatti)
+                    Contatti[idx++] = new Contatto();
 
-                int idx = 0;
+                 idx = 0;
 
-                StreamReader fin = new StreamReader("Dati.csv");
                 while (!fin.EndOfStream)
                 {
                     string riga = fin.ReadLine();
