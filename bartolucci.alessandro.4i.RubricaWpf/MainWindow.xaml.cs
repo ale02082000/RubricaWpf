@@ -1,4 +1,4 @@
-﻿using System;
+ ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,9 +28,10 @@ namespace bartolucci.alessandro._4i.RubricaWpf
         {
             try
             {
+            const int MAX = 100;
             StreamReader fin = new StreamReader("Dati.csv");
 
-                Contatto[] Contatti = new Contatto[100];
+                Contatto[] Contatti = new Contatto[MAX];
                
                
                // for (int i = 0; i < Contatti.Length; i++)
@@ -42,11 +43,15 @@ namespace bartolucci.alessandro._4i.RubricaWpf
 
                 while (!fin.EndOfStream)
                 {
+                if(idx<MAX)
                     string riga = fin.ReadLine();
                     Contatto c = new Contatto(riga);
 
                     Contatti[idx++] = c;
                 }
+
+                else 
+                    break;
 
                 dgDati.ItemsSource = Contatti;
             }
