@@ -68,7 +68,7 @@ namespace bartolucci.alessandro._4i.RubricaWpf
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No no!!\n\n" + ex.Message);
+                MessageBox.Show("No no!!\n\n" + ex.Message\nalla);
             }
 
             /*
