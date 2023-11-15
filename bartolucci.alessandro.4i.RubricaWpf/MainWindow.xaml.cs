@@ -46,12 +46,23 @@ namespace bartolucci.alessandro._4i.RubricaWpf
                 if(idx<MAX)
                     string riga = fin.ReadLine();
                     Contatto c = new Contatto(riga);
-
+                   c.Numer0=idx;
                     Contatti[idx++] = c;
                 }
 
                 else 
                     break;
+                    
+}
+
+        for(; idx< max; idx++){
+        Contatto c = new Contatto();
+        c.Numero = idx;
+        Contatti[idx] = c;
+        }
+
+        
+                    
 
                 dgDati.ItemsSource = Contatti;
             }
