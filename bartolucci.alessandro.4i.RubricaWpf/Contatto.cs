@@ -41,13 +41,24 @@ namespace bartolucci.alessandro._4i.RubricaWpf
         public Contatto(string riga)
         {
             string[] campi = riga.Split(';');
-            if (campi.Length >= 4)
+            if (campi.Length >= 5)
             {
-                this.Nome = campi[0];
-                this.Cognome = campi[1];
-                this.Telefono = campi[2];
-                this.EMail = campi[3];
+
+            int pk = 0;
+                if(int.TryParse(campi[0], out pk));
+                this.Numero = campi[0];
+                this.Nome = campi[1];
+                this.Cognome = campi[2];
+                this.Telefono = campi[3];
+                this.EMail = campi[4];
             }
+
+            else{
+
+                throw new ArgumentOut
+
+            }
+                
         }
 
         public Contatto(int numero, string nome, string cognome)
