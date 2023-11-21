@@ -8,64 +8,23 @@ namespace bartolucci.alessandro._4i.RubricaWpf
 {
     internal class Contatto
     {
-        private int _numero;
-        private string _cognome;
-
-        public int Numero
         {
-            get
+            string[] fields = row.Split(';');
+            if (fields.Length >= 5)
             {
-                return _numero;
-            }
-
-            set
-            {
-                if (value < 0 || value > 100)
-                    throw new ArgumentOutOfRangeException();
-
-                _numero = value;
+                numero = 0;
+                int.TryParse(fields[0], out numero);
+                nome = fields[1];
+                cognome = fields[2];
+                cellulare = fields[3];
+                email = fields[4];
             }
         }
-
-        public string Nome { get; set; }
-        public string EMail { get; set; }
-        public string Telefono { get; set; }
-        public string Citta { get; set; }
-        public string CAP { get; set; }
-
-        public string Cognome { get => _cognome; set => _cognome = value; }
-
         public Contatto() { }
-
-        // Costruisce un Contatto, partendo da una riga CSV
-        public Contatto(string riga)
-        {
-            string[] campi = riga.Split(';');
-            if (campi.Length >= 5)
-            {
-
-            int pk = 0;
-                if(int.TryParse(campi[0], out pk));
-                this.Numero = campi[0];
-                this.Nome = campi[1];
-                this.Cognome = campi[2];
-                this.Telefono = campi[3];
-                this.EMail = campi[4];
-            }
-
-            else{
-
-                throw new ArgumentOut
-
-            }
-                
-        }
-
-        public Contatto(int numero, string nome, string cognome)
-        {
-            Numero = numero;
-            Nome = nome;
-            Cognome = cognome;
-        }
+        public string Nome { get => nome; set => nome = value; }
+        public string Email { get => email; set => email = value; }
+        public string Cognome { get => cognome; set => cognome = value; }
+        public string Cellulare { get => cellulare; set => cellulare = value; }
+        public int Numero { get => numero; set => numero = value; }
     }
 }
