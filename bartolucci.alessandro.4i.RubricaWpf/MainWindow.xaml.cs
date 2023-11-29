@@ -58,7 +58,7 @@ namespace bartolucci.alessandro._4i.RubricaWpf
                     e.Row.Foreground = Brushes.White;
                     }
 
-                    else if(c.Telefono.StartsWith("3")){
+                    else if(c.Numero.StartsWith("3")){
 
 
                      e.Row.Background = Brushes.Yellow;
